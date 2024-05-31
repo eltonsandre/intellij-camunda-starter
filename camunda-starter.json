@@ -1,0 +1,133 @@
+{
+  "defaultValues": {
+    "group": "com.camunda",
+    "artifact": "my-project",
+    "persistence": "on-disk",
+    "javaVersion": "17",
+    "additionalFiles": true
+  },
+  "persistencies": [
+    {
+      "id": "on-disk",
+      "name": "On-Disk",
+      "description": null
+    },
+    {
+      "id": "in-memory",
+      "name": "In-Memory",
+      "description": null
+    }
+  ],
+  "modules": [
+    {
+      "id": "camunda-modules",
+      "title": "Modules",
+      "dependencies": [
+        {
+          "id": "camunda-rest",
+          "title": "REST API",
+          "description": "The goal of the REST API is to provide access to all relevant interfaces of the engine.",
+          "category": "camunda-modules",
+          "links": [
+            {
+              "type": "REFERENCE",
+              "url": "https://docs.camunda.org/manual/{camundaVersion}/reference/rest/",
+              "title": null
+            }
+          ],
+          "aditionalDetail": null,
+          "required": false,
+          "default": true
+        },
+        {
+          "id": "camunda-webapps",
+          "title": "Webapps",
+          "description": "Camunda 7 Cockpit is a web application for monitoring and operations. It provides access to deployed BPMN processes and DMN decisions, allows searching though running and ended instances and performing operations on these.",
+          "category": "camunda-modules",
+          "links": [
+            {
+              "type": "REFERENCE",
+              "url": "https://docs.camunda.org/manual/{camundaVersion}/webapps/cockpit/",
+              "title": null
+            }
+          ],
+          "aditionalDetail": null,
+          "required": false,
+          "default": true
+        },
+        {
+          "id": "camunda-spin",
+          "title": "Spin (XML & JSON)",
+          "description": "Camunda Spin is a library for simple XML and JSON processing on the JVM (Java Virtual Machine), targeting Java and JVM-based scripting languages such as Groovy, JRuby, Jython, JavaScript and Java Expression Language. It provides a comprehensible fluent API for working with different data formats through lightweight wrapper objects.",
+          "category": "camunda-modules",
+          "links": [
+            {
+              "type": "REFERENCE",
+              "url": "https://docs.camunda.org/manual/{camundaVersion}/reference/spin/",
+              "title": null
+            }
+          ],
+          "aditionalDetail": null,
+          "required": false,
+          "default": true
+        },
+        {
+          "id": "camunda-assert",
+          "title": "Assert",
+          "description": "Additional to normal JUnit assertions, Camunda 7 Assert adds a fluent API for asserting typical scenarios in a process integrating with AssertJ.",
+          "category": "camunda-modules",
+          "links": [
+            {
+              "type": "REFERENCE",
+              "url": "https://docs.camunda.org/manual/{camundaVersion}/user-guide/testing/#camunda-assertions",
+              "title": null
+            }
+          ],
+          "aditionalDetail": null,
+          "required": false,
+          "default": false
+        }
+      ],
+      "aditionalDetail": null
+    },
+    {
+      "id": "spring-boot-modules",
+      "title": "Spring Boot Modules",
+      "dependencies": [
+        {
+          "id": "spring-boot-web",
+          "title": "Web",
+          "description": "Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container.",
+          "category": "spring-boot-modules",
+          "links": [
+            {
+              "type": "REFERENCE",
+              "url": "https://docs.spring.io/spring-boot/docs/{springBootVersion}/reference/htmlsingle/index.html#web",
+              "title": null
+            }
+          ],
+          "aditionalDetail": null,
+          "required": false,
+          "default": false
+        },
+        {
+          "id": "spring-boot-security",
+          "title": "Security",
+          "description": "Highly customizable authentication and access-control framework for Spring applications.",
+          "category": "spring-boot-modules",
+          "links": [
+            {
+              "type": "REFERENCE",
+              "url": "https://docs.spring.io/spring-boot/docs/{springBootVersion}/reference/htmlsingle/index.html#web.security",
+              "title": null
+            }
+          ],
+          "aditionalDetail": null,
+          "required": false,
+          "default": false
+        }
+      ],
+      "aditionalDetail": null
+    }
+  ]
+}
